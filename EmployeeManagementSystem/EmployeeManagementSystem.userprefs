@@ -1,0 +1,26 @@
+﻿<Properties StartupItem="EmployeeManagementSystem.Touch/EmployeeManagementSystem.Touch.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="EmployeeManagementSystem/ViewModel/AddEmployeeViewModel.cs">
+    <Files>
+      <File FileName="EmployeeManagementSystem.Touch/Views/employeeTableViewCell.cs" Line="25" Column="56" />
+      <File FileName="EmployeeManagementSystem.Touch/Views/MainViewController.cs" Line="25" Column="41" />
+      <File FileName="EmployeeManagementSystem/ViewModel/AddEmployeeViewModel.cs" Line="13" Column="15" />
+      <File FileName="EmployeeManagementSystem/RepositoryService/EmployeeService.cs" Line="21" Column="1" />
+      <File FileName="EmployeeManagementSystem/Model/EmployeeModel.cs" Line="8" Column="5" />
+      <File FileName="EmployeeManagementSystem/ViewModel/MainViewModel.cs" Line="34" Column="1" />
+      <File FileName="EmployeeManagementSystem.Touch/Views/AddEmployeeViewController.cs" Line="10" Column="70" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.EmployeeManagementSystem PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint enabled="false" file="/Users/sarath/EmployeeManagementSystem/EmployeeManagementSystem.Touch/ViewController.cs" line="17" column="57" />
+      <Breakpoint enabled="false" file="/Users/sarath/EmployeeManagementSystem/EmployeeManagementSystem/ViewModel/AddEmployeeViewModel.cs" line="172" column="29" />
+      <Breakpoint enabled="false" file="/Users/sarath/EmployeeManagementSystem/EmployeeManagementSystem/ViewModel/AddEmployeeViewModel.cs" line="171" column="1" />
+      <Breakpoint enabled="false" file="/Users/sarath/EmployeeManagementSystem/EmployeeManagementSystem/ViewModel/AddEmployeeViewModel.cs" line="145" column="1" />
+      <Breakpoint enabled="false" file="/Users/sarath/EmployeeManagementSystem/EmployeeManagementSystem/ViewModel/AddEmployeeViewModel.cs" line="76" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.EmployeeManagementSystem.Touch PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.112B7E78-E70B-4CC4-8822-A1318ED87025" />
+</Properties>

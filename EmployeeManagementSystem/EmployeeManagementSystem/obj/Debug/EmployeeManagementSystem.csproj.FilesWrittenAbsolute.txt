@@ -1,0 +1,16 @@
+/Users/sarath/EmployeeManagementSystem/EmployeeManagementSystem/obj/Debug/.NETPortable,Version=v4.5,Profile=Profile78.AssemblyAttribute.cs
+/Users/sarath/EmployeeManagementSystem/EmployeeManagementSystem/bin/Debug/EmployeeManagementSystem.dll.mdb
+/Users/sarath/EmployeeManagementSystem/EmployeeManagementSystem/bin/Debug/EmployeeManagementSystem.dll
+/Users/sarath/EmployeeManagementSystem/EmployeeManagementSystem/obj/Debug/EmployeeManagementSystem.dll
+/Users/sarath/EmployeeManagementSystem/EmployeeManagementSystem/obj/Debug/EmployeeManagementSystem.dll.mdb
+/Users/sarath/EmployeeManagementSystem/EmployeeManagementSystem/bin/Debug/MvvmCross.Platform.dll
+/Users/sarath/EmployeeManagementSystem/EmployeeManagementSystem/bin/Debug/MvvmCross.Core.dll
+/Users/sarath/EmployeeManagementSystem/EmployeeManagementSystem/bin/Debug/MvvmCross.Binding.dll
+/Users/sarath/EmployeeManagementSystem/EmployeeManagementSystem/bin/Debug/MvvmCross.Localization.dll
+/Users/sarath/EmployeeManagementSystem/EmployeeManagementSystem/bin/Debug/SQLite.Net.Async.dll
+/Users/sarath/EmployeeManagementSystem/EmployeeManagementSystem/bin/Debug/SQLite.Net.dll
+/Users/sarath/EmployeeManagementSystem/EmployeeManagementSystem/bin/Debug/MvvmCross.Plugins.File.dll
+/Users/sarath/EmployeeManagementSystem/EmployeeManagementSystem/bin/Debug/System.Collections.Immutable.dll
+/Users/sarath/EmployeeManagementSystem/EmployeeManagementSystem/bin/Debug/MvvmCross.Plugins.DownloadCache.dll
+/Users/sarath/EmployeeManagementSystem/EmployeeManagementSystem/bin/Debug/MvvmCross.Plugins.Messenger.dll
+/Users/sarath/EmployeeManagementSystem/EmployeeManagementSystem/bin/Debug/MvvmCross.Plugins.PictureChooser.dll
