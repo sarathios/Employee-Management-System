@@ -17,6 +17,9 @@ namespace EmployeeManagementSystem.Touch
 
 		[Outlet]
 		UIKit.UITableView employeeTableView { get; set; }
+
+		[Outlet]
+		UIKit.UIButton loadSkype { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
@@ -28,6 +31,11 @@ namespace EmployeeManagementSystem.Touch
 			if (employeeTableView != null) {
 				employeeTableView.Dispose ();
 				employeeTableView = null;
+			}
+
+			if (loadSkype != null) {
+				loadSkype.Dispose ();
+				loadSkype = null;
 			}
 		}
 	}

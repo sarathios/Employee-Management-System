@@ -1,8 +1,11 @@
 ﻿using System;
+using ExternaAppPlugin;
 using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
 using MvvmCross.iOS.Views;
+using MvvmCross.Platform;
+using MvvmCross.Platform.Plugins;
 using UIKit;
 
 namespace EmployeeManagementSystem.Touch
@@ -27,6 +30,11 @@ namespace EmployeeManagementSystem.Touch
 			employeeTableView.ReloadData();
 			set.Bind(this.addEmployee).To(vm => vm.AddEmployee);
 			set.Apply();
+			this.loadSkype.TouchUpInside += (sender, e) => {
+				var manager = Mvx.Resolve<IMvxLaunchAppTask>();
+				manager.ShareLink("live:sarathkumbalath");
+
+			};
 			// Perform any additional setup after loading the view, typically from a nib.
 		}
 

@@ -3238,10 +3238,13 @@ static NSInteger native_to_managed_trampoline_64 (id self, SEL _cmd, MonoMethod 
 }
 	@property (nonatomic, assign) UIButton * addEmployee;
 	@property (nonatomic, assign) UITableView * employeeTableView;
+	@property (nonatomic, assign) UIButton * loadSkype;
 	-(UIButton *) addEmployee;
 	-(void) setAddEmployee:(UIButton *)p0;
 	-(UITableView *) employeeTableView;
 	-(void) setEmployeeTableView:(UITableView *)p0;
+	-(UIButton *) loadSkype;
+	-(void) setLoadSkype:(UIButton *)p0;
 	-(void) viewDidLoad;
 	-(void) didReceiveMemoryWarning;
 	-(id) init;
@@ -3270,6 +3273,18 @@ static NSInteger native_to_managed_trampoline_64 (id self, SEL _cmd, MonoMethod 
 	{
 		static MonoMethod *managed_method = NULL;
 		native_to_managed_trampoline_25 (self, _cmd, &managed_method, p0, "UIKit.UITableView, Xamarin.iOS", "EmployeeManagementSystem.Touch.MainViewController, EmployeeManagementSystem.Touch", "set_employeeTableView");
+	}
+
+	-(UIButton *) loadSkype
+	{
+		static MonoMethod *managed_method = NULL;
+		return native_to_managed_trampoline_9 (self, _cmd, &managed_method, "EmployeeManagementSystem.Touch.MainViewController, EmployeeManagementSystem.Touch", "get_loadSkype");
+	}
+
+	-(void) setLoadSkype:(UIButton *)p0
+	{
+		static MonoMethod *managed_method = NULL;
+		native_to_managed_trampoline_10 (self, _cmd, &managed_method, p0, "UIKit.UIButton, Xamarin.iOS", "EmployeeManagementSystem.Touch.MainViewController, EmployeeManagementSystem.Touch", "set_loadSkype");
 	}
 
 	-(void) viewDidLoad
@@ -4994,6 +5009,7 @@ static NSInteger native_to_managed_trampoline_64 (id self, SEL _cmd, MonoMethod 
 		{"UIFocusAnimationCoordinator", "UIKit.UIFocusAnimationCoordinator, Xamarin.iOS", NULL },
 		{"UIFocusUpdateContext", "UIKit.UIFocusUpdateContext, Xamarin.iOS", NULL },
 		{"UIImage", "UIKit.UIImage, Xamarin.iOS", NULL },
+		{"UIAlertView", "UIKit.UIAlertView, Xamarin.iOS", NULL },
 		{"UIApplication", "UIKit.UIApplication, Xamarin.iOS", NULL },
 		{"UIBarItem", "UIKit.UIBarItem, Xamarin.iOS", NULL },
 		{"UIBarButtonItem", "UIKit.UIBarButtonItem, Xamarin.iOS", NULL },
@@ -5162,7 +5178,9 @@ static NSInteger native_to_managed_trampoline_64 (id self, SEL _cmd, MonoMethod 
 		"MvvmCross.Localization", 
 		"MvvmCross.Platform.iOS", 
 		"MvvmCross.iOS", 
+		"ExternaAppPlugin", 
 		"SQLite.Net.Platform.XamarinIOS.Unified", 
+		"ExternalAppPluginLib.Touch", 
 		"MvvmCross.Plugins.File.iOS", 
 		"MvvmCross.Plugins.DownloadCache", 
 		"System.Collections.Immutable", 
@@ -5174,8 +5192,8 @@ static NSInteger native_to_managed_trampoline_64 (id self, SEL _cmd, MonoMethod 
 		NULL,
 		__xamarin_registration_assemblies,
 		__xamarin_class_map,
-		25,
-		154,
+		27,
+		155,
 		60
 	};
 
@@ -5189,151 +5207,152 @@ void xamarin_create_classes () {
 	__xamarin_class_map [6].handle = objc_getClass ("UIFocusAnimationCoordinator");
 	__xamarin_class_map [7].handle = objc_getClass ("UIFocusUpdateContext");
 	__xamarin_class_map [8].handle = objc_getClass ("UIImage");
-	__xamarin_class_map [9].handle = objc_getClass ("UIApplication");
-	__xamarin_class_map [10].handle = objc_getClass ("UIBarItem");
-	__xamarin_class_map [11].handle = objc_getClass ("UIBarButtonItem");
-	__xamarin_class_map [12].handle = objc_getClass ("UIBezierPath");
-	__xamarin_class_map [13].handle = objc_getClass ("UIControl");
-	__xamarin_class_map [14].handle = objc_getClass ("UIButton");
-	__xamarin_class_map [15].handle = objc_getClass ("UICollectionViewLayout");
-	__xamarin_class_map [16].handle = objc_getClass ("UICollectionViewLayoutAttributes");
-	__xamarin_class_map [17].handle = objc_getClass ("NSArray");
-	__xamarin_class_map [18].handle = objc_getClass ("UICollectionViewTransitionLayout");
-	__xamarin_class_map [19].handle = objc_getClass ("UIImageView");
-	__xamarin_class_map [20].handle = objc_getClass ("NSAttributedString");
-	__xamarin_class_map [21].handle = objc_getClass ("UIColor");
-	__xamarin_class_map [22].handle = objc_getClass ("UIKit_UIControlEventProxy");
-	__xamarin_class_map [23].handle = objc_getClass ("NSBundle");
-	__xamarin_class_map [24].handle = objc_getClass ("UIDevice");
-	__xamarin_class_map [25].handle = objc_getClass ("NSCalendar");
-	__xamarin_class_map [26].handle = objc_getClass ("NSCoder");
-	__xamarin_class_map [27].handle = objc_getClass ("NSDate");
-	__xamarin_class_map [28].handle = objc_getClass ("UINavigationController");
-	__xamarin_class_map [29].handle = objc_getClass ("UIPickerView");
-	__xamarin_class_map [30].handle = objc_getClass ("UIScreen");
-	__xamarin_class_map [31].handle = objc_getClass ("UISegmentedControl");
-	__xamarin_class_map [32].handle = objc_getClass ("NSNull");
-	__xamarin_class_map [33].handle = objc_getClass ("NSValue");
-	__xamarin_class_map [34].handle = objc_getClass ("NSNumber");
-	__xamarin_class_map [35].handle = objc_getClass ("NSRunLoop");
-	__xamarin_class_map [36].handle = objc_getClass ("UILabel");
-	__xamarin_class_map [37].handle = objc_getClass ("UILocalNotification");
-	__xamarin_class_map [38].handle = objc_getClass ("NSString");
-	__xamarin_class_map [39].handle = objc_getClass ("NSURL");
-	__xamarin_class_map [40].handle = objc_getClass ("UINib");
-	__xamarin_class_map [41].handle = objc_getClass ("CALayer");
-	__xamarin_class_map [42].handle = objc_getClass ("__MonoMac_NSActionDispatcher");
-	__xamarin_class_map [43].handle = objc_getClass ("__MonoMac_NSAsyncActionDispatcher");
-	__xamarin_class_map [44].handle = objc_getClass ("NSAutoreleasePool");
-	__xamarin_class_map [45].handle = objc_getClass ("NSError");
-	__xamarin_class_map [46].handle = objc_getClass ("UIPress");
-	__xamarin_class_map [47].handle = objc_getClass ("UIProgressView");
-	__xamarin_class_map [48].handle = objc_getClass ("UIRefreshControl");
-	__xamarin_class_map [49].handle = objc_getClass ("NSUserActivity");
-	__xamarin_class_map [50].handle = objc_getClass ("UISlider");
-	__xamarin_class_map [51].handle = objc_getClass ("UIStepper");
-	__xamarin_class_map [52].handle = objc_getClass ("UIStoryboard");
-	__xamarin_class_map [53].handle = objc_getClass ("UISwitch");
-	__xamarin_class_map [54].handle = objc_getClass ("UITabBar");
-	__xamarin_class_map [55].handle = objc_getClass ("UITabBarController");
-	__xamarin_class_map [56].handle = objc_getClass ("UITabBarItem");
-	__xamarin_class_map [57].handle = objc_getClass ("UITableViewController");
-	__xamarin_class_map [58].handle = objc_getClass ("UITableViewFocusUpdateContext");
-	__xamarin_class_map [59].handle = objc_getClass ("UITableViewRowAction");
-	__xamarin_class_map [60].handle = objc_getClass ("NSDateComponents");
-	__xamarin_class_map [61].handle = objc_getClass ("NSException");
-	__xamarin_class_map [62].handle = objc_getClass ("NSTextAttachment");
-	__xamarin_class_map [63].handle = objc_getClass ("NSTextContainer");
-	__xamarin_class_map [64].handle = objc_getClass ("UITextPosition");
-	__xamarin_class_map [65].handle = objc_getClass ("UITextRange");
-	__xamarin_class_map [66].handle = objc_getClass ("UITextSelectionRect");
-	__xamarin_class_map [67].handle = objc_getClass ("UIAlertAction");
-	__xamarin_class_map [68].handle = objc_getClass ("UIAlertController");
-	__xamarin_class_map [69].handle = objc_getClass ("UITouch");
-	__xamarin_class_map [70].handle = objc_getClass ("UITraitCollection");
-	__xamarin_class_map [71].handle = objc_getClass ("UIActivityIndicatorView");
-	__xamarin_class_map [72].handle = objc_getClass ("UICollectionViewFocusUpdateContext");
-	__xamarin_class_map [73].handle = objc_getClass ("UIUserNotificationSettings");
-	__xamarin_class_map [74].handle = objc_getClass ("UIDatePicker");
-	__xamarin_class_map [75].handle = objc_getClass ("UICollectionReusableView");
-	__xamarin_class_map [76].handle = objc_getClass ("UICollectionViewCell");
-	__xamarin_class_map [77].handle = objc_getClass ("UICollectionViewController");
-	__xamarin_class_map [78].handle = objc_getClass ("UIWindow");
-	__xamarin_class_map [79].handle = objc_getClass ("UIApplicationShortcutItem");
-	__xamarin_class_map [80].handle = objc_getClass ("UIGestureRecognizer");
-	__xamarin_class_map [81].handle = objc_getClass ("UIScrollView");
-	__xamarin_class_map [82].handle = objc_getClass ("UICollectionView");
-	__xamarin_class_map [83].handle = objc_getClass ("UIImagePickerController");
-	__xamarin_class_map [84].handle = objc_getClass ("NSDictionary");
-	__xamarin_class_map [85].handle = objc_getClass ("NSMutableDictionary");
-	__xamarin_class_map [86].handle = objc_getClass ("NSData");
-	__xamarin_class_map [87].handle = objc_getClass ("UITapGestureRecognizer");
-	__xamarin_class_map [88].handle = objc_getClass ("UISwipeGestureRecognizer");
-	__xamarin_class_map [89].handle = objc_getClass ("UIPageViewController");
-	__xamarin_class_map [90].handle = objc_getClass ("UISearchBar");
-	__xamarin_class_map [91].handle = objc_getClass ("UITableView");
-	__xamarin_class_map [92].handle = objc_getClass ("UITextField");
-	__xamarin_class_map [93].handle = objc_getClass ("UITextView");
-	__xamarin_class_map [94].handle = [MvvmCross_iOS_Platform_MvxApplicationDelegate class];
-	__xamarin_class_map [95].handle = [AppDelegate class];
-	__xamarin_class_map [96].handle = [ViewController class];
-	__xamarin_class_map [97].handle = [MvvmCross_Platform_iOS_Views_MvxEventSourceViewController class];
-	__xamarin_class_map [98].handle = [MvvmCross_iOS_Views_MvxViewController class];
-	__xamarin_class_map [99].handle = [MvvmCross_iOS_Views_MvxViewController_1 class];
-	__xamarin_class_map [100].handle = [AddEmployeeViewController class];
-	__xamarin_class_map [101].handle = [MvvmCross_Binding_iOS_Views_MvxTableViewCell class];
-	__xamarin_class_map [102].handle = [employeeTableViewCell class];
-	__xamarin_class_map [103].handle = [MvvmCross_Binding_iOS_Views_MvxBaseTableViewSource class];
-	__xamarin_class_map [104].handle = [MvvmCross_Binding_iOS_Views_MvxTableViewSource class];
-	__xamarin_class_map [105].handle = [EmployeeManagementSystem_Touch_MainViewController_employeeTableViewDataSource class];
-	__xamarin_class_map [106].handle = [MainViewController class];
-	__xamarin_class_map [107].handle = objc_getClass ("__UIGestureRecognizerToken");
-	__xamarin_class_map [108].handle = objc_getClass ("__UIGestureRecognizerParameterlessToken");
-	__xamarin_class_map [109].handle = objc_getClass ("__UIGestureRecognizerParametrizedToken");
-	__xamarin_class_map [110].handle = objc_getClass ("UIKit_UIView_UIViewAppearance");
-	__xamarin_class_map [111].handle = objc_getClass ("UIKit_UIScrollView_UIScrollViewAppearance");
-	__xamarin_class_map [112].handle = objc_getClass ("UIKit_UICollectionView_UICollectionViewAppearance");
-	__xamarin_class_map [113].handle = objc_getClass ("UIKit_UIImagePickerController__UIImagePickerControllerDelegate");
-	__xamarin_class_map [114].handle = objc_getClass ("__UITapGestureRecognizer");
-	__xamarin_class_map [115].handle = objc_getClass ("__UISwipeGestureRecognizer");
-	__xamarin_class_map [116].handle = objc_getClass ("UIKit_UIPageViewController__UIPageViewControllerDataSource");
-	__xamarin_class_map [117].handle = objc_getClass ("UIKit_UISearchBar__UISearchBarDelegate");
-	__xamarin_class_map [118].handle = objc_getClass ("UIKit_UITableView_UITableViewAppearance");
-	__xamarin_class_map [119].handle = objc_getClass ("UIKit_UITextField__UITextFieldDelegate");
-	__xamarin_class_map [120].handle = objc_getClass ("UIKit_UIScrollView__UIScrollViewDelegate");
-	__xamarin_class_map [121].handle = objc_getClass ("UIKit_UITextView__UITextViewDelegate");
-	__xamarin_class_map [122].handle = objc_getClass ("__NSObject_Disposer");
-	__xamarin_class_map [123].handle = [TPKeyboardAvoiding_TPKeyboardAvoidingCollectionView_TPKeyboardAvoidingCollectionViewAppearance class];
-	__xamarin_class_map [124].handle = [TPKeyboardAvoidingCollectionView class];
-	__xamarin_class_map [125].handle = [TPKeyboardAvoiding_TPKeyboardAvoidingScrollView_TPKeyboardAvoidingScrollViewAppearance class];
-	__xamarin_class_map [126].handle = [TPKeyboardAvoidingScrollView class];
-	__xamarin_class_map [127].handle = [TPKeyboardAvoiding_TPKeyboardAvoidingTableView_TPKeyboardAvoidingTableViewAppearance class];
-	__xamarin_class_map [128].handle = [TPKeyboardAvoidingTableView class];
-	__xamarin_class_map [129].handle = [MvvmCross_Binding_iOS_Views_MvxCollectionReusableView class];
-	__xamarin_class_map [130].handle = [MvxImageView class];
-	__xamarin_class_map [131].handle = [MvvmCross_Binding_iOS_Views_MvxPickerViewModel class];
-	__xamarin_class_map [132].handle = [MvvmCross_Binding_iOS_Views_MvxBaseCollectionViewSource class];
-	__xamarin_class_map [133].handle = [MvvmCross_Binding_iOS_Views_MvxStandardTableViewCell class];
-	__xamarin_class_map [134].handle = [MvvmCross_Binding_iOS_Views_MvxCollectionViewCell class];
-	__xamarin_class_map [135].handle = [MvvmCross_Binding_iOS_Views_MvxSimpleTableViewSource class];
-	__xamarin_class_map [136].handle = [MvvmCross_Binding_iOS_Views_MvxStandardTableViewSource class];
-	__xamarin_class_map [137].handle = [MvvmCross_Binding_iOS_Views_MvxView class];
-	__xamarin_class_map [138].handle = [MvvmCross_Binding_iOS_Views_MvxCollectionViewSource class];
-	__xamarin_class_map [139].handle = [MvvmCross_Binding_iOS_Views_MvxCollectionViewSourceAnimated class];
-	__xamarin_class_map [140].handle = [MvvmCross_Binding_iOS_Views_MvxActionBasedTableViewSource class];
-	__xamarin_class_map [141].handle = [MvvmCross_Platform_iOS_Views_MvxEventSourceCollectionViewController class];
-	__xamarin_class_map [142].handle = [MvvmCross_Platform_iOS_Views_MvxEventSourceTabBarController class];
-	__xamarin_class_map [143].handle = [MvvmCross_Platform_iOS_Views_MvxEventSourceTableViewController class];
-	__xamarin_class_map [144].handle = [MvvmCross_Platform_iOS_Views_MvxEventSourcePageViewController class];
-	__xamarin_class_map [145].handle = [MvvmCross_iOS_Views_MvxTabBarViewController class];
-	__xamarin_class_map [146].handle = [MvvmCross_iOS_Views_MvxTabBarViewController_1 class];
-	__xamarin_class_map [147].handle = [MvvmCross_iOS_Views_MvxTableViewController class];
-	__xamarin_class_map [148].handle = [MvvmCross_iOS_Views_MvxTableViewController_1 class];
-	__xamarin_class_map [149].handle = [MvvmCross_iOS_Views_MvxCollectionViewController class];
-	__xamarin_class_map [150].handle = [MvvmCross_iOS_Views_MvxCollectionViewController_1 class];
-	__xamarin_class_map [151].handle = [MvvmCross_iOS_Views_MvxPageViewController class];
-	__xamarin_class_map [152].handle = [MvvmCross_iOS_Views_MvxPageViewController_1 class];
-	__xamarin_class_map [153].handle = [MvvmCross_iOS_Views_MvxUIRefreshControl class];
+	__xamarin_class_map [9].handle = objc_getClass ("UIAlertView");
+	__xamarin_class_map [10].handle = objc_getClass ("UIApplication");
+	__xamarin_class_map [11].handle = objc_getClass ("UIBarItem");
+	__xamarin_class_map [12].handle = objc_getClass ("UIBarButtonItem");
+	__xamarin_class_map [13].handle = objc_getClass ("UIBezierPath");
+	__xamarin_class_map [14].handle = objc_getClass ("UIControl");
+	__xamarin_class_map [15].handle = objc_getClass ("UIButton");
+	__xamarin_class_map [16].handle = objc_getClass ("UICollectionViewLayout");
+	__xamarin_class_map [17].handle = objc_getClass ("UICollectionViewLayoutAttributes");
+	__xamarin_class_map [18].handle = objc_getClass ("NSArray");
+	__xamarin_class_map [19].handle = objc_getClass ("UICollectionViewTransitionLayout");
+	__xamarin_class_map [20].handle = objc_getClass ("UIImageView");
+	__xamarin_class_map [21].handle = objc_getClass ("NSAttributedString");
+	__xamarin_class_map [22].handle = objc_getClass ("UIColor");
+	__xamarin_class_map [23].handle = objc_getClass ("UIKit_UIControlEventProxy");
+	__xamarin_class_map [24].handle = objc_getClass ("NSBundle");
+	__xamarin_class_map [25].handle = objc_getClass ("UIDevice");
+	__xamarin_class_map [26].handle = objc_getClass ("NSCalendar");
+	__xamarin_class_map [27].handle = objc_getClass ("NSCoder");
+	__xamarin_class_map [28].handle = objc_getClass ("NSDate");
+	__xamarin_class_map [29].handle = objc_getClass ("UINavigationController");
+	__xamarin_class_map [30].handle = objc_getClass ("UIPickerView");
+	__xamarin_class_map [31].handle = objc_getClass ("UIScreen");
+	__xamarin_class_map [32].handle = objc_getClass ("UISegmentedControl");
+	__xamarin_class_map [33].handle = objc_getClass ("NSNull");
+	__xamarin_class_map [34].handle = objc_getClass ("NSValue");
+	__xamarin_class_map [35].handle = objc_getClass ("NSNumber");
+	__xamarin_class_map [36].handle = objc_getClass ("NSRunLoop");
+	__xamarin_class_map [37].handle = objc_getClass ("UILabel");
+	__xamarin_class_map [38].handle = objc_getClass ("UILocalNotification");
+	__xamarin_class_map [39].handle = objc_getClass ("NSString");
+	__xamarin_class_map [40].handle = objc_getClass ("NSURL");
+	__xamarin_class_map [41].handle = objc_getClass ("UINib");
+	__xamarin_class_map [42].handle = objc_getClass ("CALayer");
+	__xamarin_class_map [43].handle = objc_getClass ("__MonoMac_NSActionDispatcher");
+	__xamarin_class_map [44].handle = objc_getClass ("__MonoMac_NSAsyncActionDispatcher");
+	__xamarin_class_map [45].handle = objc_getClass ("NSAutoreleasePool");
+	__xamarin_class_map [46].handle = objc_getClass ("NSError");
+	__xamarin_class_map [47].handle = objc_getClass ("UIPress");
+	__xamarin_class_map [48].handle = objc_getClass ("UIProgressView");
+	__xamarin_class_map [49].handle = objc_getClass ("UIRefreshControl");
+	__xamarin_class_map [50].handle = objc_getClass ("NSUserActivity");
+	__xamarin_class_map [51].handle = objc_getClass ("UISlider");
+	__xamarin_class_map [52].handle = objc_getClass ("UIStepper");
+	__xamarin_class_map [53].handle = objc_getClass ("UIStoryboard");
+	__xamarin_class_map [54].handle = objc_getClass ("UISwitch");
+	__xamarin_class_map [55].handle = objc_getClass ("UITabBar");
+	__xamarin_class_map [56].handle = objc_getClass ("UITabBarController");
+	__xamarin_class_map [57].handle = objc_getClass ("UITabBarItem");
+	__xamarin_class_map [58].handle = objc_getClass ("UITableViewController");
+	__xamarin_class_map [59].handle = objc_getClass ("UITableViewFocusUpdateContext");
+	__xamarin_class_map [60].handle = objc_getClass ("UITableViewRowAction");
+	__xamarin_class_map [61].handle = objc_getClass ("NSDateComponents");
+	__xamarin_class_map [62].handle = objc_getClass ("NSException");
+	__xamarin_class_map [63].handle = objc_getClass ("NSTextAttachment");
+	__xamarin_class_map [64].handle = objc_getClass ("NSTextContainer");
+	__xamarin_class_map [65].handle = objc_getClass ("UITextPosition");
+	__xamarin_class_map [66].handle = objc_getClass ("UITextRange");
+	__xamarin_class_map [67].handle = objc_getClass ("UITextSelectionRect");
+	__xamarin_class_map [68].handle = objc_getClass ("UIAlertAction");
+	__xamarin_class_map [69].handle = objc_getClass ("UIAlertController");
+	__xamarin_class_map [70].handle = objc_getClass ("UITouch");
+	__xamarin_class_map [71].handle = objc_getClass ("UITraitCollection");
+	__xamarin_class_map [72].handle = objc_getClass ("UIActivityIndicatorView");
+	__xamarin_class_map [73].handle = objc_getClass ("UICollectionViewFocusUpdateContext");
+	__xamarin_class_map [74].handle = objc_getClass ("UIUserNotificationSettings");
+	__xamarin_class_map [75].handle = objc_getClass ("UIDatePicker");
+	__xamarin_class_map [76].handle = objc_getClass ("UICollectionReusableView");
+	__xamarin_class_map [77].handle = objc_getClass ("UICollectionViewCell");
+	__xamarin_class_map [78].handle = objc_getClass ("UICollectionViewController");
+	__xamarin_class_map [79].handle = objc_getClass ("UIWindow");
+	__xamarin_class_map [80].handle = objc_getClass ("UIApplicationShortcutItem");
+	__xamarin_class_map [81].handle = objc_getClass ("UIGestureRecognizer");
+	__xamarin_class_map [82].handle = objc_getClass ("UIScrollView");
+	__xamarin_class_map [83].handle = objc_getClass ("UICollectionView");
+	__xamarin_class_map [84].handle = objc_getClass ("UIImagePickerController");
+	__xamarin_class_map [85].handle = objc_getClass ("NSDictionary");
+	__xamarin_class_map [86].handle = objc_getClass ("NSMutableDictionary");
+	__xamarin_class_map [87].handle = objc_getClass ("NSData");
+	__xamarin_class_map [88].handle = objc_getClass ("UITapGestureRecognizer");
+	__xamarin_class_map [89].handle = objc_getClass ("UISwipeGestureRecognizer");
+	__xamarin_class_map [90].handle = objc_getClass ("UIPageViewController");
+	__xamarin_class_map [91].handle = objc_getClass ("UISearchBar");
+	__xamarin_class_map [92].handle = objc_getClass ("UITableView");
+	__xamarin_class_map [93].handle = objc_getClass ("UITextField");
+	__xamarin_class_map [94].handle = objc_getClass ("UITextView");
+	__xamarin_class_map [95].handle = [MvvmCross_iOS_Platform_MvxApplicationDelegate class];
+	__xamarin_class_map [96].handle = [AppDelegate class];
+	__xamarin_class_map [97].handle = [ViewController class];
+	__xamarin_class_map [98].handle = [MvvmCross_Platform_iOS_Views_MvxEventSourceViewController class];
+	__xamarin_class_map [99].handle = [MvvmCross_iOS_Views_MvxViewController class];
+	__xamarin_class_map [100].handle = [MvvmCross_iOS_Views_MvxViewController_1 class];
+	__xamarin_class_map [101].handle = [AddEmployeeViewController class];
+	__xamarin_class_map [102].handle = [MvvmCross_Binding_iOS_Views_MvxTableViewCell class];
+	__xamarin_class_map [103].handle = [employeeTableViewCell class];
+	__xamarin_class_map [104].handle = [MvvmCross_Binding_iOS_Views_MvxBaseTableViewSource class];
+	__xamarin_class_map [105].handle = [MvvmCross_Binding_iOS_Views_MvxTableViewSource class];
+	__xamarin_class_map [106].handle = [EmployeeManagementSystem_Touch_MainViewController_employeeTableViewDataSource class];
+	__xamarin_class_map [107].handle = [MainViewController class];
+	__xamarin_class_map [108].handle = objc_getClass ("__UIGestureRecognizerToken");
+	__xamarin_class_map [109].handle = objc_getClass ("__UIGestureRecognizerParameterlessToken");
+	__xamarin_class_map [110].handle = objc_getClass ("__UIGestureRecognizerParametrizedToken");
+	__xamarin_class_map [111].handle = objc_getClass ("UIKit_UIView_UIViewAppearance");
+	__xamarin_class_map [112].handle = objc_getClass ("UIKit_UIScrollView_UIScrollViewAppearance");
+	__xamarin_class_map [113].handle = objc_getClass ("UIKit_UICollectionView_UICollectionViewAppearance");
+	__xamarin_class_map [114].handle = objc_getClass ("UIKit_UIImagePickerController__UIImagePickerControllerDelegate");
+	__xamarin_class_map [115].handle = objc_getClass ("__UITapGestureRecognizer");
+	__xamarin_class_map [116].handle = objc_getClass ("__UISwipeGestureRecognizer");
+	__xamarin_class_map [117].handle = objc_getClass ("UIKit_UIPageViewController__UIPageViewControllerDataSource");
+	__xamarin_class_map [118].handle = objc_getClass ("UIKit_UISearchBar__UISearchBarDelegate");
+	__xamarin_class_map [119].handle = objc_getClass ("UIKit_UITableView_UITableViewAppearance");
+	__xamarin_class_map [120].handle = objc_getClass ("UIKit_UITextField__UITextFieldDelegate");
+	__xamarin_class_map [121].handle = objc_getClass ("UIKit_UIScrollView__UIScrollViewDelegate");
+	__xamarin_class_map [122].handle = objc_getClass ("UIKit_UITextView__UITextViewDelegate");
+	__xamarin_class_map [123].handle = objc_getClass ("__NSObject_Disposer");
+	__xamarin_class_map [124].handle = [TPKeyboardAvoiding_TPKeyboardAvoidingCollectionView_TPKeyboardAvoidingCollectionViewAppearance class];
+	__xamarin_class_map [125].handle = [TPKeyboardAvoidingCollectionView class];
+	__xamarin_class_map [126].handle = [TPKeyboardAvoiding_TPKeyboardAvoidingScrollView_TPKeyboardAvoidingScrollViewAppearance class];
+	__xamarin_class_map [127].handle = [TPKeyboardAvoidingScrollView class];
+	__xamarin_class_map [128].handle = [TPKeyboardAvoiding_TPKeyboardAvoidingTableView_TPKeyboardAvoidingTableViewAppearance class];
+	__xamarin_class_map [129].handle = [TPKeyboardAvoidingTableView class];
+	__xamarin_class_map [130].handle = [MvvmCross_Binding_iOS_Views_MvxCollectionReusableView class];
+	__xamarin_class_map [131].handle = [MvxImageView class];
+	__xamarin_class_map [132].handle = [MvvmCross_Binding_iOS_Views_MvxPickerViewModel class];
+	__xamarin_class_map [133].handle = [MvvmCross_Binding_iOS_Views_MvxBaseCollectionViewSource class];
+	__xamarin_class_map [134].handle = [MvvmCross_Binding_iOS_Views_MvxStandardTableViewCell class];
+	__xamarin_class_map [135].handle = [MvvmCross_Binding_iOS_Views_MvxCollectionViewCell class];
+	__xamarin_class_map [136].handle = [MvvmCross_Binding_iOS_Views_MvxSimpleTableViewSource class];
+	__xamarin_class_map [137].handle = [MvvmCross_Binding_iOS_Views_MvxStandardTableViewSource class];
+	__xamarin_class_map [138].handle = [MvvmCross_Binding_iOS_Views_MvxView class];
+	__xamarin_class_map [139].handle = [MvvmCross_Binding_iOS_Views_MvxCollectionViewSource class];
+	__xamarin_class_map [140].handle = [MvvmCross_Binding_iOS_Views_MvxCollectionViewSourceAnimated class];
+	__xamarin_class_map [141].handle = [MvvmCross_Binding_iOS_Views_MvxActionBasedTableViewSource class];
+	__xamarin_class_map [142].handle = [MvvmCross_Platform_iOS_Views_MvxEventSourceCollectionViewController class];
+	__xamarin_class_map [143].handle = [MvvmCross_Platform_iOS_Views_MvxEventSourceTabBarController class];
+	__xamarin_class_map [144].handle = [MvvmCross_Platform_iOS_Views_MvxEventSourceTableViewController class];
+	__xamarin_class_map [145].handle = [MvvmCross_Platform_iOS_Views_MvxEventSourcePageViewController class];
+	__xamarin_class_map [146].handle = [MvvmCross_iOS_Views_MvxTabBarViewController class];
+	__xamarin_class_map [147].handle = [MvvmCross_iOS_Views_MvxTabBarViewController_1 class];
+	__xamarin_class_map [148].handle = [MvvmCross_iOS_Views_MvxTableViewController class];
+	__xamarin_class_map [149].handle = [MvvmCross_iOS_Views_MvxTableViewController_1 class];
+	__xamarin_class_map [150].handle = [MvvmCross_iOS_Views_MvxCollectionViewController class];
+	__xamarin_class_map [151].handle = [MvvmCross_iOS_Views_MvxCollectionViewController_1 class];
+	__xamarin_class_map [152].handle = [MvvmCross_iOS_Views_MvxPageViewController class];
+	__xamarin_class_map [153].handle = [MvvmCross_iOS_Views_MvxPageViewController_1 class];
+	__xamarin_class_map [154].handle = [MvvmCross_iOS_Views_MvxUIRefreshControl class];
 	xamarin_add_registration_map (&__xamarin_registration_map);
 }
 

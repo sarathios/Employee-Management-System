@@ -10,6 +10,8 @@ using SQLite.Net;
 using SQLite.Net.Async;
 using System.Net;
 using SQLite.Net.Platform.XamarinIOS;
+using ExternaAppPlugin;
+using ExternalAppPluginLib.Touch;
 
 namespace EmployeeManagementSystem.Touch
 {
@@ -19,8 +21,8 @@ namespace EmployeeManagementSystem.Touch
 		public Setup(MvxApplicationDelegate appDelegate, IMvxIosViewPresenter presenter)
 			: base(appDelegate, presenter)
 		{
-
 		}
+
 		protected override IMvxApplication CreateApp()
 		{
 			Mvx.ConstructAndRegisterSingleton<ISQLitePlatform, SQLitePlatformIOS>();
@@ -34,6 +36,12 @@ namespace EmployeeManagementSystem.Touch
 			var _connection = new SQLiteConnection(platform, DBPath, SQLiteOpenFlags.ReadWrite | SQLiteOpenFlags.Create | SQLiteOpenFlags.FullMutex | SQLiteOpenFlags.SharedCache, true, null, null, null);
 			return new App(_asyncconnection);
 
+		}
+
+		protected override void InitializeLastChance()
+		{
+			Mvx.RegisterSingleton<IMvxLaunchAppTask>(new MvxLaunchAppTask());
+			base.InitializeLastChance();
 		}
 	}
 }

@@ -196,6 +196,14 @@
       <Project>{6F9E223A-5030-4101-9358-F9224ADE6187}</Project>
       <Name>EmployeeManagementSystem</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\ExternalAppPlugin\ExternaAppPlugin\ExternaAppPlugin.csproj">
+      <Project>{04F43427-872E-41F2-9083-7E6173C9780B}</Project>
+      <Name>ExternaAppPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ExternalAppPlugin\ExternalAppPluginLib.Touch\ExternalAppPluginLib.Touch.csproj">
+      <Project>{7102BAC3-6654-4115-B5A7-1990ABEA331F}</Project>
+      <Name>ExternalAppPluginLib.Touch</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="TPKeyboardAvoiding">
@@ -208,6 +216,8 @@
     <BundleResource Include="Resources\menuHeader%403x.png" />
     <BundleResource Include="Resources\camera%402x.png" />
     <BundleResource Include="Resources\camera%403x.png" />
+    <BundleResource Include="Resources\callbutton%402x.png" />
+    <BundleResource Include="Resources\callbutton%403x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
